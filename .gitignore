@@ -1,0 +1,15 @@
+# API
+payrollAPI/bin/
+payrollAPI/obj/
+payrollAPI/.vs/
+payrollAPI/appsettings.Development.json
+
+# Frontend
+payroll-frontend/node_modules/
+payroll-frontend/.next/
+payroll-frontend/.env.local
+payroll-frontend/.env.production
+
+# OS
+.DS_Store
+Thumbs.db
