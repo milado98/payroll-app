@@ -87,6 +87,14 @@ builder.Services.AddScoped<IPayslipPdfService, PayslipPdfService>();
 
 var app = builder.Build();
 
+// Auto-create tables on startup
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider
+        .GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
+
 // Seed roles on startup
 using (var scope = app.Services.CreateScope())
 {
